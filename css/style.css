@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  text-decoration: none;
+  font-family: "Kodchasan", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgb(15, 15, 15);
+}
+
+a:hover {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+}
+/* ----------------lateral button navigation---------------- */
+span {
+  background: rgba(24, 7, 7, 0.788) !important;
+}
+
+/* ---------------Section HOME--------------- */
+.home {
+  background: rgb(130, 183, 199);
+}
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo {
+  animation: fill 0.5s ease forwards 3s;
+  width: auto;
+  height: auto;
+}
+#logo path:nth-child(1) {
+  stroke-dasharray: 479;
+  stroke-dashoffset: 479;
+  animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2) {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 626;
+  stroke-dashoffset: 626;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 352;
+  stroke-dashoffset: 352;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 435;
+  stroke-dashoffset: 435;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 381;
+  stroke-dashoffset: 381;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+.hero-logo {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  animation: hero-logo 3000ms ease 0s 1 normal forwards;
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgb(17, 17, 17);
+  }
+}
+/* --------------------End animation hero SVG-------------------- */
+.hero-content {
+  position: relative;
+  font-family: "Monserrat", sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0.625rem;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin: 20px auto;
+}
+.hero-icon {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* ---------------Animation icons-------------------- */
+.hero-icon-list li {
+  padding: 20px 20px;
+  display: inline-block;
+  width: 100px;
+}
+.hero-icon-item path{
+  fill:transparent;
+  stroke-width: 10;
+  stroke:rgb(0, 0, 0);
+}
+ .github svg path{
+  stroke-dasharray: 1750;
+  stroke-dashoffset: 0;
+}
+.github svg:hover path{
+  animation: animate-github 1s linear  forwards;
+}
+@keyframes animate-github{
+  0%{
+    stroke-dashoffset: 0;
+  }
+  40%{
+    stroke-dashoffset: 1750;
+  }
+  80%{
+    stroke-dashoffset: 3500;
+    fill: transparent;
+  }
+  100%{
+    stroke-dashoffset: 3500;
+    fill: #000;
+  }
+}
+.linkedin svg path{
+  stroke-dasharray: 1750;
+  stroke-dashoffset: 0;
+}
+.linkedin svg:hover path{
+  animation: animate-icons 1s linear  forwards;
+}
+@keyframes animate-icons{
+  0%{
+    stroke-dashoffset: 0;
+  }
+  40%{
+    stroke-dashoffset: 1750;
+  }
+  80%{
+    stroke-dashoffset: 3500;
+    fill: transparent;
+  }
+  100%{
+    stroke-dashoffset: 3500;
+    fill: #000;
+  }
+}
+.twitter svg path{
+  stroke-dasharray: 2300;
+  stroke-dashoffset: 0;
+}
+.twitter svg:hover path{
+  animation: animate-icons 1s linear  forwards;
+}
+@keyframes animate-icons{
+  0%{
+    stroke-dashoffset: 0;
+  }
+  40%{
+    stroke-dashoffset: 2300;
+  }
+  80%{
+    stroke-dashoffset: 4600;
+    fill: transparent;
+  }
+  100%{
+    stroke-dashoffset: 4600;
+    fill: #000;
+  }
+}
+/* ---------------END Animation icons--------------- */
+
+/* ---------------Section A propos--------------- */
+.about {
+  background: rgb(130, 183, 199);
+}
+/* @keyframes hero-logo {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  } */
+/* ---------------Section Compétences--------------- */
+.skills {
+  background: rgb(100, 31, 77);
+}
+/* ---------------Section Portfolio--------------- */
+.portfolio {
+  background: rgb(219, 216, 21);
+}
+/* ---------------Section Contact--------------- */
+.contact {
+  background: rgb(91, 214, 108);
+}
