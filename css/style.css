@@ -8,6 +8,9 @@
   text-decoration: none;
   font-family: "Kodchasan", sans-serif;
 }
+/* body {
+  height: 100vh;
+} */
 
 h1,
 h2,
@@ -27,7 +30,7 @@ a:hover {
   width: 100%;
   height: 100vh;
 }
-/* ----------------lateral button navigation---------------- */
+/* ----------------lateral right button navigation---------------- */
 span {
   background: rgba(24, 7, 7, 0.788) !important;
 }
@@ -35,6 +38,27 @@ span {
 /* ---------------Section HOME--------------- */
 .home {
   background: rgb(130, 183, 199);
+}
+/* --------------------Lines top left-------------------- */
+.lines {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  z-index: 1;
+}
+.l1 {
+  width: 250px;
+  height: 3px;
+  background: rgb(15, 15, 15);
+  border-radius: 5px;
+}
+.l2 {
+  position: relative;
+  top: 20px;
+  width: 140px;
+  height: 3px;
+  background: rgb(15, 15, 15);
+  border-radius: 5px;
 }
 .hero {
   position: relative;
@@ -44,10 +68,11 @@ span {
   justify-content: center;
   align-items: center;
 }
+/* --------------------animation hero SVG-------------------- */
 #logo {
   animation: fill 0.5s ease forwards 3s;
-  width: auto;
-  height: auto;
+  width: 200px;
+  height: 150px;
 }
 #logo path:nth-child(1) {
   stroke-dasharray: 479;
@@ -112,95 +137,107 @@ span {
   margin: 0.625rem;
 }
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 600;
-  margin-bottom: 0;
-  margin: 20px auto;
+  margin: 30px auto;
+  text-transform: capitalize;
 }
 .hero-icon {
+  position: absolute;
+  top: 10%;
+  left: 2%;
   font-weight: 600;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 10px;
 }
-
+.hero-icon-list {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 /* ---------------Animation icons-------------------- */
 .hero-icon-list li {
   padding: 20px 20px;
   display: inline-block;
   width: 100px;
 }
-.hero-icon-item path{
-  fill:transparent;
+.hero-icon-item path {
+  fill: transparent;
   stroke-width: 10;
-  stroke:rgb(0, 0, 0);
+  stroke: rgb(0, 0, 0);
 }
- .github svg path{
+.github svg path {
   stroke-dasharray: 1750;
   stroke-dashoffset: 0;
 }
-.github svg:hover path{
-  animation: animate-github 1s linear  forwards;
+.github svg:hover path {
+  animation: animate-github 1s linear forwards;
 }
-@keyframes animate-github{
-  0%{
+@keyframes animate-github {
+  0% {
     stroke-dashoffset: 0;
   }
-  40%{
+  40% {
     stroke-dashoffset: 1750;
   }
-  80%{
+  80% {
     stroke-dashoffset: 3500;
     fill: transparent;
   }
-  100%{
+  100% {
     stroke-dashoffset: 3500;
     fill: #000;
   }
 }
-.linkedin svg path{
+.linkedin svg path {
   stroke-dasharray: 1750;
   stroke-dashoffset: 0;
 }
-.linkedin svg:hover path{
-  animation: animate-icons 1s linear  forwards;
+.linkedin svg:hover path {
+  animation: animate-icons 1s linear forwards;
 }
-@keyframes animate-icons{
-  0%{
+@keyframes animate-icons {
+  0% {
     stroke-dashoffset: 0;
   }
-  40%{
+  40% {
     stroke-dashoffset: 1750;
   }
-  80%{
+  80% {
     stroke-dashoffset: 3500;
     fill: transparent;
   }
-  100%{
+  100% {
     stroke-dashoffset: 3500;
     fill: #000;
   }
 }
-.twitter svg path{
+.twitter svg path {
   stroke-dasharray: 2300;
   stroke-dashoffset: 0;
 }
-.twitter svg:hover path{
-  animation: animate-icons 1s linear  forwards;
+.twitter svg:hover path {
+  animation: animate-icons 1s linear forwards;
 }
-@keyframes animate-icons{
-  0%{
+@keyframes animate-icons {
+  0% {
     stroke-dashoffset: 0;
   }
-  40%{
+  40% {
     stroke-dashoffset: 2300;
   }
-  80%{
+  80% {
     stroke-dashoffset: 4600;
     fill: transparent;
   }
-  100%{
+  100% {
     stroke-dashoffset: 4600;
     fill: #000;
   }
@@ -209,7 +246,7 @@ span {
 
 /* ---------------Section A propos--------------- */
 .about {
-  background: rgb(130, 183, 199);
+  background: rgb(202, 129, 86);
 }
 /* @keyframes hero-logo {
     0% {
@@ -222,6 +259,7 @@ span {
       transform: translateX(0);
     }
   } */
+
 /* ---------------Section Compétences--------------- */
 .skills {
   background: rgb(100, 31, 77);
