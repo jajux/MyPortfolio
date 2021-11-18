@@ -6,21 +6,27 @@
   box-sizing: border-box;
   user-select: none;
   text-decoration: none;
-  font-family: "Kodchasan", sans-serif;
 }
-/* body {
-  height: 100vh;
-} */
+@font-face {
+  font-family: "murberrynormal";
+  src: url("../font/murberry/murberry-webfont.woff2") format("woff2"),
+    url("../font//murberry/murberry-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
+h4 {
+  font-weight: 700;
   font-size: 1.5rem;
   color: rgb(15, 15, 15);
+  font-family: "murberrynormal";
+}
+p {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 a:hover {
@@ -37,7 +43,8 @@ span {
 
 /* ---------------Section HOME--------------- */
 .home {
-  background: rgb(130, 183, 199);
+  /* background: #82b7c7; */
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 /* --------------------Lines top left-------------------- */
 .lines {
@@ -68,53 +75,6 @@ span {
   justify-content: center;
   align-items: center;
 }
-/* --------------------animation hero SVG-------------------- */
-#logo {
-  animation: fill 0.5s ease forwards 3s;
-  width: 200px;
-  height: 150px;
-}
-#logo path:nth-child(1) {
-  stroke-dasharray: 479;
-  stroke-dashoffset: 479;
-  animation: line-anim 2s ease forwards;
-}
-#logo path:nth-child(2) {
-  stroke-dasharray: 450;
-  stroke-dashoffset: 450;
-  animation: line-anim 2s ease forwards 0.3s;
-}
-#logo path:nth-child(3) {
-  stroke-dasharray: 626;
-  stroke-dashoffset: 626;
-  animation: line-anim 2s ease forwards 0.6s;
-}
-#logo path:nth-child(4) {
-  stroke-dasharray: 352;
-  stroke-dashoffset: 352;
-  animation: line-anim 2s ease forwards 0.9s;
-}
-#logo path:nth-child(5) {
-  stroke-dasharray: 472;
-  stroke-dashoffset: 472;
-  animation: line-anim 2s ease forwards 1.2s;
-}
-#logo path:nth-child(6) {
-  stroke-dasharray: 435;
-  stroke-dashoffset: 435;
-  animation: line-anim 2s ease forwards 1.5s;
-}
-#logo path:nth-child(7) {
-  stroke-dasharray: 381;
-  stroke-dashoffset: 381;
-  animation: line-anim 2s ease forwards 1.8s;
-}
-.hero-logo {
-  width: 250px;
-  display: block;
-  margin: 0 auto;
-  animation: hero-logo 3000ms ease 0s 1 normal forwards;
-}
 @keyframes line-anim {
   to {
     stroke-dashoffset: 0;
@@ -128,38 +88,78 @@ span {
     fill: rgb(17, 17, 17);
   }
 }
+/* --------------------animation hero name SVG-------------------- */
+#intro {
+  animation: fill 0.5s ease forwards 3s;
+  width: 500px;
+  height: 350px;
+}
+#intro path:nth-child(1) {
+  stroke-dasharray: 407;
+  stroke-dashoffset: 407;
+  animation: line-anim 2s ease forwards;
+}
+#intro path:nth-child(2) {
+  stroke-dasharray: 468;
+  stroke-dashoffset: 468;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#intro path:nth-child(3) {
+  stroke-dasharray: 617;
+  stroke-dashoffset: 617;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#intro path:nth-child(4) {
+  stroke-dasharray: 468;
+  stroke-dashoffset: 468;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+#intro path:nth-child(5) {
+  stroke-dasharray: 527;
+  stroke-dashoffset: 527;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#intro path:nth-child(6) {
+  stroke-dasharray: 2493;
+  stroke-dashoffset: 2493;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+
+
 /* --------------------End animation hero SVG-------------------- */
 .hero-content {
   position: relative;
-  font-family: "Monserrat", sans-serif;
-  color: white;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 0.625rem;
+  margin: auto;
+  width: 900px;
 }
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 600;
-  margin: 30px auto;
+  /* margin: 30px auto; */
   text-transform: capitalize;
 }
 .hero-icon {
-  position: absolute;
-  top: 10%;
-  left: 2%;
+  /* position: absolute; */
+  /* top: 25%;
+  left: -45%; */
   font-weight: 600;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .hero-icon-list {
   position: absolute;
-  left: 5%;
+  /* left:50%;
   top: 50%;
   transform: translateY(-50%, -50%);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   flex-direction: column;
 }
 /* ---------------Animation icons-------------------- */
@@ -244,11 +244,21 @@ span {
 }
 /* ---------------END Animation icons--------------- */
 
+/* ---------------MEDIA QUERY home--------------- */
+
+/* ---------------END MEDIA QUERY home--------------- */
+
 /* ---------------Section A propos--------------- */
 .about {
-  background: rgb(202, 129, 86);
+  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
 }
-/* @keyframes hero-logo {
+/* 
+.hero-logo {
+  display: block;
+  margin: 0 auto;
+  animation: hero-logo 3000ms ease 0s 1 normal forwards;
+}
+@keyframes hero-logo {
     0% {
       opacity: 0;
       transform: translateX(-50px);
@@ -262,13 +272,13 @@ span {
 
 /* ---------------Section Compétences--------------- */
 .skills {
-  background: rgb(100, 31, 77);
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
 }
 /* ---------------Section Portfolio--------------- */
 .portfolio {
-  background: rgb(219, 216, 21);
+  background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
 }
 /* ---------------Section Contact--------------- */
 .contact {
-  background: rgb(91, 214, 108);
+  background: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
 }
